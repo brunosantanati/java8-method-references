@@ -16,13 +16,13 @@ public class MethodReferencesExample1 {
 		
 		//using normal Lambda
 		languages.stream()
-			.map(language -> StringUtils.capitalize(language))
+			.map(language -> StringUtils.capitalize(language)) //Lambda
 			.collect(Collectors.toList())
 			.forEach(System.out::println);
 		
 		//using method reference
 		languages.stream()
-			.map(StringUtils::capitalize)
+			.map(StringUtils::capitalize) //here is the method reference
 			.collect(Collectors.toList())
 			.forEach(System.out::println);
 		
